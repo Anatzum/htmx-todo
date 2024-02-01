@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    background-color: rgba(145, 145, 145, 0.2);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(39, 49, 139);
+    margin: 0;
+    color: white;
+}
+
+.content {
+    width: 60%;
+    margin: auto;
+    margin-top: 2em;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1em 1em 1em;
+}
+
+.task-list-container, form {
+    border-radius: 20px;
+    box-shadow: 1px 1px rgb(138, 138, 138);
+    /* background-color: rgba(145, 145, 145, 0.2); */
+    background-color: white;
+}
+
+.input-container {
+    width: 60%;
+    /* margin: auto; */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .input-box > label {
+    display: block;
+} */
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form > button {
+    margin-top: 1em;
+    width: 60%;
+    background-color: rgb(82, 94, 199);
+    color: white;
+    border-radius: 25px;
+    box-shadow: none;
+    border-width: 0;
+    padding: .5em;
+}
+
+#task-list-header {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.task-row {
+    display: grid;
+    grid-template-columns: 1.5fr 4fr 1fr 1fr 1fr;
+    padding: .5em 0;
+    border-top: 1px solid black;
+}
+
+.task-row > div {
+    padding: 0 .5em;
+}

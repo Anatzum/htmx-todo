@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Todo</title>
+</head>
+<body>
+  <header>
+    <h1>Todo</h1>
+  </header>
+
+  <div class="content">
+    <form
+      method="post"
+      action="/tasks"
+    >
+      <h2 class="form-header">Create Task</h2> 
+      <div class="input-container">
+        <div class="input-box">
+          <label for="task-title">Title</label>
+          <input type="text" name="title" id="task-title">
+        </div>
+        <div class="input-box">
+          <label for="task-description">Description</label>
+          <input type="text" name="description" id="task-description">
+        </div>
+        <div class="input-box">
+          <label for="task-due-date">Due Date</label>
+          <input type="date" name="due_date" id="task-due-date">
+        </div>
+      </div>
+      <button type="submit">Add</button>
+    </form>
+
+    <div class="task-list-container">
+      <h2 id="task-list-header">Task List</h2>
+      <div
+        id="task-list"
+        hx-trigger="load"
+        hx-get="/tasks"
+        hx-swap="innerHTML"
+      ></div>
+    </div>
+  </div>
+</body>
+</html>
